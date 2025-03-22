@@ -5,5 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message Board</title>
   </head>
-  <body></body>
+  <body>
+    <a href="/new">Create New Message</a>
+    <ol>
+      <% messages.forEach((message)=> { %>
+      <li>
+        <ul>
+          <li><%= message.user %> says:</li>
+          <li><%= message.text %></li>
+          <li>(<%= message.added %>)</li>
+        </ul>
+      </li>
+      <% }) %>
+    </ol>
+  </body>
 </html>
